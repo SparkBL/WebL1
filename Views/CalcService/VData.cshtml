@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "ViewData";
+var res = ViewData["CalcUnit"] as ICalcUnit;
+}
+
+
+@{
+    ViewData["Title"] = "ViewData";
+}
+<h2 style="padding-bottom:20px">@ViewData["Title"]</h2>
+
+<h6>Rand Value First: @res.a</h6>
+<h6>Rand Value Second: @res.b</h6>
+<h6>Add: @res.a + @res.b = @res.Sum()</h6>
+<h6>Add: @res.a - @res.b = @res.Min()</h6>
+<h6>Add: @res.a * @res.b = @res.Mult()</h6>
+<h6>Add: @res.a / @res.b = @res.Div()</h6>
+
+
+

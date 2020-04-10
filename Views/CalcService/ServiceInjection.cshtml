@@ -1,0 +1,14 @@
+﻿@{
+@inject ICalcUnitManager CalcUnitManager;
+@CalcUnitManager.Rebase();
+}
+
+<h2 style="padding-bottom:20px">@ViewData["Title"]</h2>
+
+<h6>Rand Value First: @CalcUnitManager.cur.a</h6>
+<h6>Rand Value Second: @CalcUnitManager.cur.b</h6>
+<h6>Add: @CalcUnitManager.cur.a + @CalcUnitManager.cur.b = @CalcUnitManager.cur.Sum()</h6>
+<h6>Add: @CalcUnitManager.cur.a - @CalcUnitManager.cur.b = @CalcUnitManager.cur.Min()</h6>
+<h6>Add: @CalcUnitManager.cur.a * @CalcUnitManager.cur.b = @CalcUnitManager.cur.Mult()</h6>
+<h6>Add: @CalcUnitManager.cur.a / @CalcUnitManager.cur.b = @CalcUnitManager.cur.Div()</h6>
+
