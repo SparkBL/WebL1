@@ -107,7 +107,4 @@ C:\Users\gooob\source\repos\WebL_1\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.Cod
 C:\Users\gooob\source\repos\WebL_1\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\gooob\source\repos\WebL_1\obj\Debug\netcoreapp3.1\WebL_1.csproj.CoreCompileInputs.cache
 C:\Users\gooob\source\repos\WebL_1\obj\Debug\netcoreapp3.1\WebL_1.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\gooob\source\repos\WebL_1\obj\Debug\netcoreapp3.1\Razor\Views\CalcService\Model.cshtml.g.cs
-C:\Users\gooob\source\repos\WebL_1\obj\Debug\netcoreapp3.1\Razor\Views\CalcService\VData.cshtml.g.cs
-C:\Users\gooob\source\repos\WebL_1\obj\Debug\netcoreapp3.1\Razor\Views\CalcService\VBag.cshtml.g.cs
-C:\Users\gooob\source\repos\WebL_1\obj\Debug\netcoreapp3.1\Razor\Views\CalcService\ServiceInjection.cshtml.g.cs
+C:\Users\gooob\source\repos\WebL_1\obj\Debug\netcoreapp3.1\Razor\Views\CalcService\Main.cshtml.g.cs

@@ -3,12 +3,12 @@
 }
 
 <div style=" text-align:left">
-    <h5 class="display-4"style="padding-bottom:20px">Calc Service Demonstration</h5>
+    <h5 class="display-4"style="padding-bottom:20px">Form parameters parsing demo</h5>
     <ul>
-        <li><a asp-controller="CalcService" asp-action="Model">Using ViewModel Calc</a></li>
-        <li><a asp-controller="CalcService" asp-action="Vdata">Using ViewData Calc</a></li>
-        <li><a asp-controller="CalcService" asp-action="VBag">Using ViewBag Calc</a></li>
-        <li><a asp-controller="CalcService" asp-action="ServiceInjection">Using Service Injection</a></li>
+        <li><a asp-controller="CalcService" asp-action="Manual">Manual parsing in single action</a></li>
+        <li><a asp-controller="CalcService" asp-action="ManualWithSeparateHandlers">Manual parsing in separate actions</a></li>
+        <li><a asp-controller="CalcService" asp-action="ModelBindingInParameters">Model binding (parameters)</a></li>
+        <li><a asp-controller="CalcService" asp-action="ModelBindingInSeparateModel">Model binding (separate model)</a></li>
 
     </ul>
 </div>

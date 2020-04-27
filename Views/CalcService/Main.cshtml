@@ -1,0 +1,17 @@
+﻿
+
+<h2 style="padding-bottom:20px">@ViewData["Title"]</h2>
+
+<form method="post" style="display:@ViewBag.formShow">
+    <input name="a" />
+    <select name="type">
+        <option value="0">+</option>
+        <option value="1">-</option>
+        <option value="2">*</option>
+        <option value="3">/</option>
+    </select>
+    <input  name="b" />
+    <input type="submit" value="Calculate" />
+</form>
+
+@Html.Raw(ViewBag.result)

@@ -1,20 +1,23 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace WebL_1.Models
 {
-    public class CalcUnit : ICalcUnit
+//    [BindProperties(SupportsGet = true)]
+    public class CalcUnit
     {
         public int a { get; set; }
         public int b { get; set; }
-        public CalcUnit()
+        public CalcUnit(int _a,int _b)
         {
-            Random r = new Random();
-            a = r.Next(0, 10);
-            b = r.Next(0, 10);
+
+            a = _a;
+            b = _b;
         }
+        public CalcUnit() { }
         public int Sum() { return a + b; }
         public int Min() { return a - b; }
         public int Mult() { return a * b; }
@@ -28,7 +31,17 @@ namespace WebL_1.Models
                 return 0;
             }
         }
-        
+        public int Action(int type)
+        {
+            switch (type)
+            {
+                case 0: return Sum();
+                case 1: return Min();
+                case 2: return Mult();
+                case 3: return Div();
+                default: return 0;
+            }
+        }
     }
 
 }

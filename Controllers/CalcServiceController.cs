@@ -9,33 +9,72 @@ namespace WebL_1.Controllers
 {
     public class CalcServiceController : Controller
     {
-       
-        public string Index()
+  
+      
+        public IActionResult Manual(int a, int b, int type)
         {
-            return "Meh";
+             if (Request.Method == "POST")
+            {
+                ViewData["Title"] = "Result";
+                ViewBag.formShow = "none";
+                CalcUnit c = new CalcUnit(a, b);
+                ViewBag.result = "<h2>" + c.Action(type) + "</h2>";
+                return View("Main");
+            }
+            ViewData["Title"] = "Manual";
+            ViewBag.formShow = "block";
+            return View("Main");
         }
 
-        public IActionResult Model()
+
+        [HttpGet]
+        public IActionResult ManualWithSeparateHandlers()
         {
-            var viewmodel = new CalcUnit();
-            return View(viewmodel);
+            ViewData["Title"] = "Manual with separate handlers";
+            ViewBag.formShow = "block";
+            return View("Main");
         }
 
-        public IActionResult ServiceInjection()
+
+        [HttpPost]
+        public IActionResult ManualWithSeparateHandlers(int a,int b, int type)
         {
-            ViewData["Title"] = "Service Injection";
-            return View();
+            ViewData["Title"] = "Result";
+            ViewBag.formShow = "none";
+            CalcUnit c = new CalcUnit(a, b);
+            ViewBag.result = "<h2>" + c.Action(type) + "</h2>";
+            return View("Main");
         }
-        public IActionResult VData()
+        [HttpGet]
+        public IActionResult ModelBindingInParameters()
         {
-            ViewData["CalcUnit"] = new CalcUnit();
-            return View();
+            ViewData["Title"] = "Model binding in parameters";
+            ViewBag.formShow = "block";
+            return View("Main");
+        }
+        [HttpPost]
+        public IActionResult ModelBindingInParameters([Bind("a", "b")] CalcUnit c, int type)
+        {
+            ViewData["Title"] = "Result";
+            ViewBag.formShow = "none";
+            ViewBag.result = "<h2>" + c.Action(type) + "</h2>";
+            return View("Main");
         }
 
-        public IActionResult VBag()
+        [HttpGet]
+        public IActionResult ModelBindingInSeparateModel()
         {
-            ViewBag.CalcUnit = new CalcUnit();
-            return View();
+            ViewData["Title"] = "Model binding in separate model";
+            ViewBag.formShow = "block";
+            return View("Main");
+        }
+        [HttpPost]
+        public IActionResult ModelBindingInSeparateModel(BindedCalcUnit bc)
+        {
+            ViewData["Title"] = "Result";
+            ViewBag.formShow = "none";
+            ViewBag.result = "<h2>" + bc.Action() + "</h2>";
+            return View("Main");
         }
     }
 }
